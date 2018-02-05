@@ -231,6 +231,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), getName() + getResources().getString(R.string.Submitwithcomp,TotalScore), Toast.LENGTH_LONG).show();
             Button submit = findViewById(R.id.buttonSubmit);
             submit.setEnabled(false);
+            flag=1;
         } else if (x < 8 && x > 5) {
             Toast.makeText(getApplicationContext(), getName() + getResources().getString(R.string.Submitwitherror,TotalScore), Toast.LENGTH_LONG).show();
             Button submit = findViewById(R.id.buttonSubmit);
