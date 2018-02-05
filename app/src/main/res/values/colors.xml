@@ -3,6 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="firstHeaderColor">#FFD95813</color>
+    <color name="black">@android:color/black</color>
+    <color name="earthblue">@android:color/holo_blue_light</color>
+    <color name="firstHeaderColor">#e48f62</color>
     <color name="CorrectAnswer">#FF27D913</color>
 </resources>
