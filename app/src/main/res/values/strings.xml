@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EarthQuiz</string>
+    <string name="app_name">PlanetQuiz</string>
     <string name="FirstIntro">Do You Really Know Your Planet</string>
     <string name="FailIntro">Have you considered life on Mars?</string>
     <string name="NameQuestion">What\'s your name human?</string>
@@ -44,9 +44,9 @@
     <string name="Submitbutton">Submit</string>
     <string name="Resetbutton">Reset</string>
     <string name="Submitwithpartialcomp">Finish all questions</string>
-    <string name="Submitwithcomp"> Congrats You have %1$d questions correct out of 8</string>
-    <string name="Submitwitherror">  You have %1$d questions correct out of 8</string>
-    <string name="SubmitFail"> Too bad! You have just %1$d questions correct out of 8</string>
+    <string name="Submitwithcomp">\  Congrats You have %1$d questions correct out of 8</string>
+    <string name="Submitwitherror">\  You have %1$d questions correct out of 8</string>
+    <string name="SubmitFail">\  Too bad! You have just %1$d questions correct out of 8</string>
 
 
 </resources>
