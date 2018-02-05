@@ -1,3 +1,52 @@
 <resources>
     <string name="app_name">EarthQuiz</string>
+    <string name="FirstIntro">Do You Really Know Your Planet</string>
+    <string name="FailIntro">Have you considered life on Mars?</string>
+    <string name="NameQuestion">What\'s your name human?</string>
+    <string name="hintname">Name</string>
+    <string name="FirstQuestion">1. What’s Earth’s true shape?</string>
+    <string name="Answer1Question1">Flat</string>
+    <string name="Answer2Question1">Sphere</string>
+    <string name="Answer3Question1">Oblate Spheroid</string>
+    <string name="SecondQuestion">2. World\'s longest river is?</string>
+    <string name="Answer1Question2">Nile</string>
+    <string name="Answer2Question2">Nile River</string>
+    <string name="Answer3Question2">The Nile River</string>
+    <string name="Hint2Question2">Hint-2</string>
+    <string name="Hint1Question2">Hint-1</string>
+    <string name="Hint0Question2">Hint-0</string>
+    <string name="Hint1">Flows through Africa</string>
+    <string name="Hint2">"Starts with N"</string>
+    <string name="Hint3">No more hints</string>
+    <string name="ThirdQuestion">3. 134 degrees Fahrenheit (56.7 degrees C) was the hottest temperature ever measured on Earth. Where?</string>
+    <string name="Answer1Question3">Death Valley,California</string>
+    <string name="Answer2Question3">North Pole</string>
+    <string name="Answer3Question3">El Azizia,Libya</string>
+    <string name="Answer4Question3">The Flaming Mountain, China</string>
+    <string name="FourthQuestion">4. Select the landlocked countries</string>
+    <string name="Answer1Question4">Mongolia</string>
+    <string name="Answer2Question4">Serbia</string>
+    <string name="Answer3Question4">Hungary</string>
+    <string name="Answer4Question4">India</string>
+    <string name="FifthQuestion">5. Number of continents on Earth</string>
+    <string name="SixthQuestion">6. Name the Continent</string>
+    <string name="Answer1Question6">Asia</string>
+    <string name="Answer2Question6">The Asia</string>
+    <string name="SeventhQuestion">7. What\'s the deepest place in the ocean?</string>
+    <string name="Answer1Question7">The middle of the Atlantic Ocean</string>
+    <string name="Answer2Question7">The Bermuda Triangle</string>
+    <string name="Answer3Question7">The Mariana Trench</string>
+    <string name="EighthQuestion">8. Which of these planets is closer to Sun than Earth"</string>
+    <string name="Answer1Question8">Mercury</string>
+    <string name="Answer2Question8">Saturn</string>
+    <string name="Answer3Question8">Neptune</string>
+    <string name="Answer4Question8">Venus</string>
+    <string name="Submitbutton">Submit</string>
+    <string name="Resetbutton">Reset</string>
+    <string name="Submitwithpartialcomp">Finish all questions</string>
+    <string name="Submitwithcomp"> Congrats You have %1$d questions correct out of 8</string>
+    <string name="Submitwitherror">  You have %1$d questions correct out of 8</string>
+    <string name="SubmitFail"> Too bad! You have just %1$d questions correct out of 8</string>
+
+
 </resources>

@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView mars;
     TextView firstHeader;
     int counter = 0;
+    int flag=0;
     Button hintButton;
     int numberOfContinents = 0;
     TextView numCont;
@@ -43,24 +44,89 @@ public class MainActivity extends AppCompatActivity {
     CheckBox check2answer8;
     CheckBox check3answer8;
     CheckBox check4answer8;
+    EditText answerTwo;
+    EditText answerThree;
+
+
+    static final String Score = "A";
+    static final String Continentnumber="B";
+    static final String Submit_flag="C";
+    static final String hintCounter="D";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (savedInstanceState != null) {
+            TotalScore = savedInstanceState.getInt(Score);
+            numberOfContinents = savedInstanceState.getInt(Continentnumber);
+            flag=savedInstanceState.getInt(Submit_flag);
+            counter=savedInstanceState.getInt(hintCounter);
+        }
         setContentView(R.layout.activity_main);
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        numCont = findViewById(R.id.answer5);
+        numCont.setText(String.valueOf(numberOfContinents));
+        hintButton = findViewById(R.id.hint0);
+        if (counter == 0)
+            hintButton.setText(getResources().getString(R.string.Hint2Question2));
+        else if (counter == 1)
+            hintButton.setText(getResources().getString(R.string.Hint1Question2));
+        else
+            hintButton.setText(getResources().getString(R.string.Hint0Question2));
+
+        if (flag==1){
+            radio_Button1 = findViewById(R.id.answer1);
+            radio_Button1.setBackgroundColor(getResources().getColor(R.color.CorrectAnswer));
+            answerTwo = findViewById(R.id.answer2);
+            answerTwo.setTextColor(getResources().getColor(R.color.CorrectAnswer));
+            radio_Button2 = findViewById(R.id.answer3);
+            radio_Button2.setBackgroundColor(getResources().getColor(R.color.CorrectAnswer));
+            check1answer4 = findViewById(R.id.answer4Check1);
+            check2answer4 = findViewById(R.id.answer4Check2);
+            check1answer4.setBackgroundColor(getResources().getColor(R.color.CorrectAnswer));
+            check2answer4.setBackgroundColor(getResources().getColor(R.color.CorrectAnswer));
+            answerThree = findViewById(R.id.answer6);
+            answerThree.setTextColor(getResources().getColor(R.color.CorrectAnswer));
+            radio_Button3 = findViewById(R.id.answer7);
+            radio_Button3.setBackgroundColor(getResources().getColor(R.color.CorrectAnswer));
+            check1answer8 = findViewById(R.id.answer8Check1);
+            check4answer8 = findViewById(R.id.answer8Check4);
+            check1answer8.setBackgroundColor(getResources().getColor(R.color.CorrectAnswer));
+            check4answer8.setBackgroundColor(getResources().getColor(R.color.CorrectAnswer));
+            if(TotalScore<5){
+            firstHeader = findViewById(R.id.firstHeader);
+            firstHeader.setText(getResources().getString(R.string.FailIntro));
+            firstHeader.setBackgroundResource(R.color.firstHeaderColor);
+            mars = findViewById(R.id.intro);
+            mars.setImageResource(R.drawable.mars);
+            ScrollView test = findViewById(R.id.test);
+            test.setBackgroundResource(R.color.firstHeaderColor);
+            }
+            Button submit = findViewById(R.id.buttonSubmit);
+            submit.setEnabled(false);
+        }
+
     }
+
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        savedInstanceState.putInt(Score, TotalScore);
+        savedInstanceState.putInt(Continentnumber, numberOfContinents);
+        savedInstanceState.putInt(Submit_flag, flag);
+        savedInstanceState.putInt(hintCounter, counter);
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
 
     public void Hint(View view) {
         hintButton = findViewById(R.id.hint0);
         if (counter == 0) {
-            Toast.makeText(getApplicationContext(), "Flows through Africa", Toast.LENGTH_SHORT).show();
-            hintButton.setText("Hint-1");
+            Toast.makeText(getApplicationContext(), getResources().getString(R.string.Hint1), Toast.LENGTH_SHORT).show();
+            hintButton.setText(getResources().getString(R.string.Hint1Question2));
         } else if (counter == 1) {
-            Toast.makeText(getApplicationContext(), "Starts with N", Toast.LENGTH_SHORT).show();
-            hintButton.setText("Hint-0");
+            Toast.makeText(getApplicationContext(),getResources().getString(R.string.Hint2) , Toast.LENGTH_SHORT).show();
+            hintButton.setText(getResources().getString(R.string.Hint0Question2));
         } else {
-            Toast.makeText(getApplicationContext(), "No more hints", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), getResources().getString(R.string.Hint3), Toast.LENGTH_SHORT).show();
         }
         counter++;
     }
@@ -82,9 +148,9 @@ public class MainActivity extends AppCompatActivity {
             TotalScore++;
 
 
-        EditText answerTwo = findViewById(R.id.answer2);
+        answerTwo = findViewById(R.id.answer2);
         String answerSt1 = answerTwo.getText().toString();
-        if ((answerSt1.equals("Nile")) || (answerSt1.equals("Nile River")) || (answerSt1.equals("The Nile River")))
+        if ((answerSt1.equals(getResources().getString(R.string.Answer1Question2))) || (answerSt1.equals(getResources().getString(R.string.Answer2Question2))) || (answerSt1.equals(getResources().getString(R.string.Answer3Question2))))
             TotalScore++;
         else if (answerSt1.equals(""))
             return -1;
@@ -111,9 +177,9 @@ public class MainActivity extends AppCompatActivity {
         if (numberOfContinents == 7)
             TotalScore++;
 
-        EditText answerThree = findViewById(R.id.answer6);
+        answerThree = findViewById(R.id.answer6);
         String answerSt6 = answerThree.getText().toString();
-        if ((answerSt6.equals("Asia")) || (answerSt6.equals("The Asia")))
+        if ((answerSt6.equals(getResources().getString(R.string.Answer1Question6))) || (answerSt6.equals(getResources().getString(R.string.Answer1Question6))))
             TotalScore++;
         else if (answerSt6.equals(""))
             return -1;
@@ -137,14 +203,14 @@ public class MainActivity extends AppCompatActivity {
             return -1;
 
         radio_Button1.setBackgroundColor(getResources().getColor(R.color.CorrectAnswer));
-        answerTwo.setText("Nile");
+        answerTwo.setText(getResources().getString(R.string.Answer1Question2));
         answerTwo.setTextColor(getResources().getColor(R.color.CorrectAnswer));
         radio_Button2.setBackgroundColor(getResources().getColor(R.color.CorrectAnswer));
         check1answer4.setBackgroundColor(getResources().getColor(R.color.CorrectAnswer));
         check2answer4.setBackgroundColor(getResources().getColor(R.color.CorrectAnswer));
         numCont = findViewById(R.id.answer5);
         numCont.setText(String.valueOf(7));
-        answerThree.setText("Asia");
+        answerThree.setText(getResources().getString(R.string.Answer1Question6));
         answerThree.setTextColor(getResources().getColor(R.color.CorrectAnswer));
         radio_Button3.setBackgroundColor(getResources().getColor(R.color.CorrectAnswer));
         check1answer8.setBackgroundColor(getResources().getColor(R.color.CorrectAnswer));
@@ -158,21 +224,22 @@ public class MainActivity extends AppCompatActivity {
 
         int x = calcScore();
         if (x == -1) {
-            Toast.makeText(getApplicationContext(), "Finish all questions", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), getResources().getString(R.string.Submitwithpartialcomp), Toast.LENGTH_SHORT).show();
             return;
         }
         if (x == 8) {
-            Toast.makeText(getApplicationContext(), getName() + " Congrats You have " + x + " questions correct out of 8", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), getName() + getResources().getString(R.string.Submitwithcomp,TotalScore), Toast.LENGTH_LONG).show();
             Button submit = findViewById(R.id.buttonSubmit);
             submit.setEnabled(false);
         } else if (x < 8 && x > 5) {
-            Toast.makeText(getApplicationContext(), getName() + " You have " + x + " questions correct out of 8", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), getName() + getResources().getString(R.string.Submitwitherror,TotalScore), Toast.LENGTH_LONG).show();
             Button submit = findViewById(R.id.buttonSubmit);
             submit.setEnabled(false);
+            flag=1;
         } else {
-            Toast.makeText(getApplicationContext(), getName() + " Too bad! You have just " + x + " questions correct out of 8", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), getName() + getResources().getString(R.string.SubmitFail,TotalScore) , Toast.LENGTH_LONG).show();
             firstHeader = findViewById(R.id.firstHeader);
-            firstHeader.setText("Have you considered life on Mars?");
+            firstHeader.setText(getResources().getString(R.string.FailIntro));
             firstHeader.setBackgroundResource(R.color.firstHeaderColor);
             mars = findViewById(R.id.intro);
             mars.setImageResource(R.drawable.mars);
@@ -180,6 +247,7 @@ public class MainActivity extends AppCompatActivity {
             test.setBackgroundResource(R.color.firstHeaderColor);
             Button submit = findViewById(R.id.buttonSubmit);
             submit.setEnabled(false);
+            flag=1;
         }
     }
 
@@ -189,7 +257,7 @@ public class MainActivity extends AppCompatActivity {
         nameField.setText("");
         counter = 0;
         hintButton = findViewById(R.id.hint0);
-        hintButton.setText("Hint-2");
+        hintButton.setText(getResources().getString(R.string.Hint2Question2));
         Radio_Group1 = findViewById(R.id.firstRadio);
         Radio_Group1.clearCheck();
 
@@ -227,19 +295,21 @@ public class MainActivity extends AppCompatActivity {
         check3answer8.setChecked(false);
         check4answer8.setChecked(false);
 
-        radio_Button1.setBackgroundColor(Color.TRANSPARENT);
-        answerTwo.setTextColor(Color.BLACK);
-        radio_Button2.setBackgroundColor(Color.TRANSPARENT);
-        check1answer4.setBackgroundColor(Color.TRANSPARENT);
-        check2answer4.setBackgroundColor(Color.TRANSPARENT);
-        answerThree.setTextColor(Color.BLACK);
-        radio_Button3.setBackgroundColor(Color.TRANSPARENT);
-        check1answer8.setBackgroundColor(Color.TRANSPARENT);
-        check4answer8.setBackgroundColor(Color.TRANSPARENT);
-
+        if (flag==1) {
+            radio_Button1.setBackgroundColor(Color.TRANSPARENT);
+            answerTwo.setTextColor(Color.BLACK);
+            radio_Button2.setBackgroundColor(Color.TRANSPARENT);
+            check1answer4.setBackgroundColor(Color.TRANSPARENT);
+            check2answer4.setBackgroundColor(Color.TRANSPARENT);
+            answerThree.setTextColor(Color.BLACK);
+            radio_Button3.setBackgroundColor(Color.TRANSPARENT);
+            check1answer8.setBackgroundColor(Color.TRANSPARENT);
+            check4answer8.setBackgroundColor(Color.TRANSPARENT);
+            flag=0;
+        }
 
         firstHeader = findViewById(R.id.firstHeader);
-        firstHeader.setText("Do You Really Know Your Planet");
+        firstHeader.setText(getResources().getString(R.string.FirstIntro));
         firstHeader.setBackgroundResource(R.color.black);
         mars = findViewById(R.id.intro);
         mars.setImageResource(R.drawable.earth);

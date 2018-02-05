@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context="com.example.android.earthquiz.MainActivity">
 
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:background="@color/black"
         android:gravity="center_horizontal"
-        android:text="Do You Really Know Your Planet"
+        android:text="@string/FirstIntro"
         android:textColor="@android:color/white" />
 
     <ScrollView
@@ -43,20 +43,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="What's your name human?" />
+                    android:text="@string/NameQuestion" />
 
                 <EditText
                     android:id="@+id/name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Name"
+                    android:hint="@string/hintname"
                     android:inputType="textCapWords" />
 
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1. What’s Earth’s true shape?" />
+                    android:text="@string/FirstQuestion" />
 
                 <RadioGroup
                     android:id="@+id/firstRadio"
@@ -68,19 +68,19 @@
                         android:id="@+id/id1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Flat" />
+                        android:text="@string/Answer1Question1" />
 
                     <RadioButton
                         android:id="@+id/id2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sphere" />
+                        android:text="@string/Answer2Question1" />
 
                     <RadioButton
                         android:id="@+id/answer1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Oblate Spheroid" />
+                        android:text="@string/Answer3Question1" />
                 </RadioGroup>
 
                 <View
@@ -91,7 +91,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2. World's longest river is?" />
+                    android:text="@string/SecondQuestion" />
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
@@ -110,7 +110,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:onClick="Hint"
-                        android:text="Hint-2" />
+                        android:text="@string/Hint2Question2" />
                 </RelativeLayout>
 
                 <View
@@ -121,7 +121,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="3. 134 degrees Fahrenheit (56.7 degrees C) was the hottest temperature ever measured on Earth. Where?" />
+                    android:text="@string/ThirdQuestion" />
 
                 <RadioGroup
                     android:id="@+id/thirdRadio"
@@ -132,25 +132,25 @@
                         android:id="@+id/answer3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Death Valley,California" />
+                        android:text="@string/Answer1Question3" />
 
                     <RadioButton
                         android:id="@+id/id3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="North Pole" />
+                        android:text="@string/Answer2Question3" />
 
                     <RadioButton
                         android:id="@+id/id4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="El Azizia,Libya" />
+                        android:text="@string/Answer3Question3" />
 
                     <RadioButton
                         android:id="@+id/id5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="The Flaming Mountain, China" />
+                        android:text="@string/Answer4Question3" />
                 </RadioGroup>
 
                 <View
@@ -161,31 +161,31 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="4. Select the landlocked countries" />
+                    android:text="@string/FourthQuestion" />
 
                 <CheckBox
                     android:id="@+id/answer4Check1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mongolia" />
+                    android:text="@string/Answer1Question4" />
 
                 <CheckBox
                     android:id="@+id/answer4Check2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Serbia" />
+                    android:text="@string/Answer2Question4" />
 
                 <CheckBox
                     android:id="@+id/answer4Check3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hungary" />
+                    android:text="@string/Answer3Question4" />
 
                 <CheckBox
                     android:id="@+id/answer4Check4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="India" />
+                    android:text="@string/Answer4Question4" />
 
                 <View
                     android:layout_width="wrap_content"
@@ -195,7 +195,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="5. Number of continents on Earth" />
+                    android:text="@string/FifthQuestion" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -226,7 +226,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="6. Name the Continent" />
+                    android:text="@string/SixthQuestion" />
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -253,7 +253,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="7. What’s the deepest place in the ocean?" />
+                    android:text="@string/SeventhQuestion" />
 
                 <RadioGroup
                     android:id="@+id/seventhRadio"
@@ -264,19 +264,19 @@
                         android:id="@+id/id6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="The middle of the Atlantic Ocean" />
+                        android:text="@string/Answer1Question7" />
 
                     <RadioButton
                         android:id="@+id/id7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="The Bermuda Triangle" />
+                        android:text="@string/Answer2Question7" />
 
                     <RadioButton
                         android:id="@+id/answer7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="The Mariana Trench" />
+                        android:text="@string/Answer3Question7" />
                 </RadioGroup>
 
                 <View
@@ -287,31 +287,31 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="8. Which of these planets is closer to Sun than Earth" />
+                    android:text="@string/EighthQuestion" />
 
                 <CheckBox
                     android:id="@+id/answer8Check1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mercury" />
+                    android:text="@string/Answer1Question8" />
 
                 <CheckBox
                     android:id="@+id/answer8Check2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Saturn" />
+                    android:text="@string/Answer2Question8" />
 
                 <CheckBox
                     android:id="@+id/answer8Check3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Neptune" />
+                    android:text="@string/Answer3Question8" />
 
                 <CheckBox
                     android:id="@+id/answer8Check4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Venus" />
+                    android:text="@string/Answer4Question8" />
 
                 <View
                     android:layout_width="wrap_content"
@@ -327,14 +327,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="submitScore"
-                        android:text="Submit" />
+                        android:text="@string/Submitbutton" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:onClick="Reset"
-                        android:text="Reset" />
+                        android:text="@string/Resetbutton" />
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
