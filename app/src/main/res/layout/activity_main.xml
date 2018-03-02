@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    style="@style/defaultSize"
     android:orientation="vertical"
     tools:context="com.example.android.earthquiz.MainActivity">
 
@@ -18,13 +17,11 @@
 
     <ScrollView
         android:id="@+id/test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/defaultSize"
         android:background="@color/earthblue">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/defaultSize"
             android:orientation="vertical">
 
             <ImageView
@@ -41,45 +38,38 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                   style="@style/defaultSize"
                     android:text="@string/NameQuestion" />
 
                 <EditText
                     android:id="@+id/name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/defaultSize"
                     android:hint="@string/hintname"
                     android:inputType="textCapWords" />
 
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/defaultSize"
                     android:text="@string/FirstQuestion" />
 
                 <RadioGroup
                     android:id="@+id/firstRadio"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/defaultSize"
                     android:orientation="horizontal">
 
                     <RadioButton
                         android:id="@+id/id1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/defaultSize"
                         android:text="@string/Answer1Question1" />
 
                     <RadioButton
                         android:id="@+id/id2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/defaultSize"
                         android:text="@string/Answer2Question1" />
 
                     <RadioButton
                         android:id="@+id/answer1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/defaultSize"
                         android:text="@string/Answer3Question1" />
                 </RadioGroup>
 
@@ -89,25 +79,21 @@
                     android:background="@android:color/darker_gray" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/defaultSize"
                     android:text="@string/SecondQuestion" />
 
                 <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    style="@style/defaultSize">
 
                     <EditText
                         android:id="@+id/answer2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/defaultSize"
                         android:ems="10"
                         android:inputType="textCapWords" />
 
                     <Button
                         android:id="@+id/hint0"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/defaultSize"
                         android:layout_alignParentRight="true"
                         android:onClick="Hint"
                         android:text="@string/Hint2Question2" />
@@ -119,37 +105,31 @@
                     android:background="@android:color/darker_gray" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/defaultSize"
                     android:text="@string/ThirdQuestion" />
 
                 <RadioGroup
                     android:id="@+id/thirdRadio"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    style="@style/defaultSize">
 
                     <RadioButton
                         android:id="@+id/answer3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/defaultSize"
                         android:text="@string/Answer1Question3" />
 
                     <RadioButton
                         android:id="@+id/id3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/defaultSize"
                         android:text="@string/Answer2Question3" />
 
                     <RadioButton
                         android:id="@+id/id4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/defaultSize"
                         android:text="@string/Answer3Question3" />
 
                     <RadioButton
                         android:id="@+id/id5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/defaultSize"
                         android:text="@string/Answer4Question3" />
                 </RadioGroup>
 
@@ -159,32 +139,27 @@
                     android:background="@android:color/darker_gray" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/defaultSize"
                     android:text="@string/FourthQuestion" />
 
                 <CheckBox
                     android:id="@+id/answer4Check1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/defaultSize"
                     android:text="@string/Answer1Question4" />
 
                 <CheckBox
                     android:id="@+id/answer4Check2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/defaultSize"
                     android:text="@string/Answer2Question4" />
 
                 <CheckBox
                     android:id="@+id/answer4Check3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/defaultSize"
                     android:text="@string/Answer3Question4" />
 
                 <CheckBox
                     android:id="@+id/answer4Check4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/defaultSize"
                     android:text="@string/Answer4Question4" />
 
                 <View
@@ -193,13 +168,11 @@
                     android:background="@android:color/darker_gray" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/defaultSize"
                     android:text="@string/FifthQuestion" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    style="@style/defaultSize">
 
                     <Button
                         android:layout_width="@dimen/ButtonSize"
@@ -210,8 +183,7 @@
 
                     <TextView
                         android:id="@+id/answer5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/defaultSize"
                         android:text="0"
                         android:textColor="@android:color/black" />
 
@@ -222,10 +194,12 @@
                         android:text="+"
                         android:textSize="@dimen/ButtonTextSize" />
                 </LinearLayout>
-
-                <TextView
+                <View
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" />
+                <TextView
+                    style="@style/defaultSize"
                     android:text="@string/SixthQuestion" />
 
                 <ImageView
@@ -235,15 +209,11 @@
 
                 <EditText
                     android:id="@+id/answer6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/defaultSize"
                     android:ems="5"
                     android:inputType="textCapWords" />
 
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="1dp"
-                    android:background="@android:color/darker_gray" />
+
 
                 <View
                     android:layout_width="wrap_content"
@@ -251,8 +221,7 @@
                     android:background="@android:color/darker_gray" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/defaultSize"
                     android:text="@string/SeventhQuestion" />
 
                 <RadioGroup
