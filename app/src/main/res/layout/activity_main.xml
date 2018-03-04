@@ -38,7 +38,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                   style="@style/defaultSize"
+                    style="@style/defaultSize"
                     android:text="@string/NameQuestion" />
 
                 <EditText
@@ -82,8 +82,7 @@
                     style="@style/defaultSize"
                     android:text="@string/SecondQuestion" />
 
-                <RelativeLayout
-                    style="@style/defaultSize">
+                <RelativeLayout style="@style/defaultSize">
 
                     <EditText
                         android:id="@+id/answer2"
@@ -171,8 +170,7 @@
                     style="@style/defaultSize"
                     android:text="@string/FifthQuestion" />
 
-                <LinearLayout
-                    style="@style/defaultSize">
+                <LinearLayout style="@style/defaultSize">
 
                     <Button
                         android:layout_width="@dimen/ButtonSize"
@@ -194,10 +192,12 @@
                         android:text="+"
                         android:textSize="@dimen/ButtonTextSize" />
                 </LinearLayout>
+
                 <View
                     android:layout_width="wrap_content"
                     android:layout_height="1dp"
                     android:background="@android:color/darker_gray" />
+
                 <TextView
                     style="@style/defaultSize"
                     android:text="@string/SixthQuestion" />
@@ -214,7 +214,6 @@
                     android:inputType="textCapWords" />
 
 
-
                 <View
                     android:layout_width="wrap_content"
                     android:layout_height="1dp"
@@ -226,25 +225,21 @@
 
                 <RadioGroup
                     android:id="@+id/seventhRadio"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    style="@style/defaultSize">
 
                     <RadioButton
                         android:id="@+id/id6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/defaultSize"
                         android:text="@string/Answer1Question7" />
 
                     <RadioButton
                         android:id="@+id/id7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/defaultSize"
                         android:text="@string/Answer2Question7" />
 
                     <RadioButton
                         android:id="@+id/answer7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/defaultSize"
                         android:text="@string/Answer3Question7" />
                 </RadioGroup>
 
@@ -254,32 +249,27 @@
                     android:background="@android:color/darker_gray" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/defaultSize"
                     android:text="@string/EighthQuestion" />
 
                 <CheckBox
                     android:id="@+id/answer8Check1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/defaultSize"
                     android:text="@string/Answer1Question8" />
 
                 <CheckBox
                     android:id="@+id/answer8Check2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/defaultSize"
                     android:text="@string/Answer2Question8" />
 
                 <CheckBox
                     android:id="@+id/answer8Check3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/defaultSize"
                     android:text="@string/Answer3Question8" />
 
                 <CheckBox
                     android:id="@+id/answer8Check4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/defaultSize"
                     android:text="@string/Answer4Question8" />
 
                 <View
@@ -287,20 +277,16 @@
                     android:layout_height="11dp"
                     android:background="@android:color/black" />
 
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                <RelativeLayout style="@style/defaultSize">
 
                     <Button
                         android:id="@+id/buttonSubmit"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/defaultSize"
                         android:onClick="submitScore"
                         android:text="@string/Submitbutton" />
 
                     <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/defaultSize"
                         android:layout_alignParentRight="true"
                         android:onClick="Reset"
                         android:text="@string/Resetbutton" />
