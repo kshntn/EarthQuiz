@@ -17,6 +17,7 @@ import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 public class MainActivity extends AppCompatActivity {
     static final String Score = "A";
     static final String Continentnumber = "B";
